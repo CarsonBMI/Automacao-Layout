@@ -14,6 +14,10 @@
         window.onload = () => {
 
             function onClickButton() {
+				if(document.querySelector('#save_grid_top') == null){
+					document.getElementsByTagName(\"html\")[0].style.visibility = \"visible\";
+					return;
+				}
                 function waitUntilElementLoad(selector,  delay) {
                     if(document.querySelector(selector) != null){
                         $(selector).trigger('click');
